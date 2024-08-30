@@ -1,0 +1,88 @@
+		/* 初始化样式 */
+			html,body,ul{
+				margin: 0;
+				padding: 0;
+			}
+			/*	position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);  
+				该样式用于设置水平垂直居中
+			*/
+			.clock{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				width: 252px;
+				height: 252px;
+				background-color: #000000;
+				border-radius: 50px;
+			}
+			.dial{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				width: 220px;
+				height: 220px;
+				border-radius: 50%;
+				background-color: #fff;
+			}
+			.clock .num{
+				list-style: none;
+				width: 26px;
+				position: absolute;
+				left: 50%;
+				margin-left: -13px;
+				font-weight: 800;
+				text-align: center;
+				transform-origin: 13px 110px;
+			}
+			/* 这里必须加inline-block或block
+			 * 因为transform不适用于inline元素.
+			 */
+			.num span{
+				display: inline-block;
+			}
+			#point{
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: #000000;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			#hour{
+				width: 4px;
+				height: 70px;
+				background: #000000;
+				position: absolute;
+				top: 40px;
+				left: 50%;
+				transform: translate(-50%,0) rotate(10deg);
+				transform-origin: 2px 70px;
+				border-radius: 2px;
+			}
+			#min{
+				width: 4px;
+				height: 80px;
+				background: #000000;
+				position: absolute;
+				top: 30px;
+				left: 50%;
+				transform-origin: 2px 80px;
+				border-radius: 2px;
+			}
+			#sec{
+				width: 2px;
+				height: 120px;
+				background: #FF8900;
+				position: absolute;
+				top: -10px;
+				left: 50%;
+				transform-origin: 1px 100px;
+				border-radius: 1px;
+			}
